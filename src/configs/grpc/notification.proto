@@ -1,0 +1,16 @@
+syntax = "proto3";
+package saas.noti.api.grpc;
+//option java_package = "grpc";
+
+service UserDeviceService {
+  rpc SaveUserDevice (UserDeviceRequest) returns (UserDeviceResponse) {}
+}
+
+message UserDeviceRequest {
+  string userId = 1;
+  string deviceId = 2;
+}
+
+message UserDeviceResponse {
+  bool success = 1;
+}
